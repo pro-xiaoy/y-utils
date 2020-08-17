@@ -1,11 +1,11 @@
 ## y-utils JS组件库
 > 一款模块化、高性能js实用工具库
 ### Array
-* arraySet
+* arraySet  *对象数组*去重， 使用场景
+
 ```js
  x.arraySet(array, key)
 ```
-*对象数组*去重， 使用场景
 ```js
 let arr = [{name:'1', age:1}, {name:'2', age:2},{name:'1', age:1}]
 let newarr = x.arraySet(arr, name) 
@@ -14,17 +14,17 @@ let newarr = x.arraySet(arr, name)
 ### 公共方法
 
 ### Date方法
-* addZeroPrefix
+* addZeroPrefix *补0操作*小于10的数组进行补0
 ```js
  x.addZeroPrefix(number))
 ```
-*补0操作*小于10的数组进行补0
+
 ```js
 let a = 1
 let b = x.addZeroPrefix(a) 
 b // 01
 ```
-* formatDate
+* formatDate *时间格式化*参数分别为date和fmt
 ```js
  /*
  * fmt: 'yyyy-MM-dd hh:mm:ss'
@@ -40,15 +40,15 @@ b // 01
  x.formatDate(date, fmt)
  
 ```
-*时间格式化*参数分别为date和fmt
+
 ```js
 let now = x.formatDate(new Date, 'yyyy-MM-dd hh:mm:ss')
 ```
-* getTimeformatter
+* getTimeformatter 传入秒数以mm:ss传出，*适用计时间功能*
 ```js
  x.getTimeformatter(time)
 ```
-传入秒数以mm:ss传出，*适用计时间功能*
+
 ```js
 let a = 0
 let timer = setInterval(() => {
@@ -56,11 +56,10 @@ let timer = setInterval(() => {
 }, 1000)
 let fomater = x.getTimeformatter(a)
 ```
-* isToday
+* isToday 判断是否是当天
 ```js
  x.isToday(date)
 ```
-判断是否是当天
 ```js
 let isnow = isToday(new Date())
 ```
