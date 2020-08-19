@@ -1,6 +1,6 @@
 ## y-utils JS组件库
 > 一款模块化、高性能js实用工具库
-### Array
+### Array  **大部分针对对象数组**
 * arraySet  *对象数组*去重， 使用场景
 
 ```js
@@ -11,7 +11,26 @@ let arr = [{name:'1', age:1}, {name:'2', age:2},{name:'1', age:1}]
 let newarr = x.arraySet(arr, name) 
 
 ```
-### 公共方法
+* arraryObjRemove *数组对象选定特定删除*
+```js
+/*
+ * array: 传入数组
+ * key: 字段
+ * value: 字段值
+ * return 新数组
+ */
+x.arraryObjRemove(array, key, value)
+```
+* objincludes *对象数组是否包含某个字段*
+```js
+/*
+ * array: 传入数组
+ * key: 字段
+ * value: 字段值
+ * return 新数组或者underfined
+ */
+x.objincludes(array, key, value)
+```
 
 ### Date方法
 * addZeroPrefix *补0操作*小于10的数组进行补0
