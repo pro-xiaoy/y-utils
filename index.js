@@ -76,6 +76,25 @@
       return array.find(item=> item[key] === value)
     }
 
+    function deepClone(obj) {
+      let dist;
+    
+      if (typeof obj === "object") {
+        if(Array.isArray(obj)) {
+          dist = []
+        } else if(obj.constructor === Object) {
+          dist = {}
+        }
+        for (var i in obj) {
+          dist[i] = deepClone(obj[i]);
+        }
+        return dist;
+      } else {
+        return obj;
+      }
+    };
+
+
 
     function addZeroPrefix(number) {
       return number < 10 ? `0${number}` : number;
@@ -171,6 +190,7 @@
     }
 
     utils.arraySet = arraySet;
+    utils.deepClone = deepClone
     utils.addZeroPrefix = addZeroPrefix;
     utils.formatDate = formatDate;
     utils.getDate = getDate;
@@ -180,6 +200,7 @@
     utils.arraryRemove = arraryRemove;
     utils.arraryObjRemove = arraryObjRemove;
     utils.objincludes = objincludes
+
     return utils;
   };
 

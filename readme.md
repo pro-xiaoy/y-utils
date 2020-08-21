@@ -11,6 +11,12 @@ let arr = [{name:'1', age:1}, {name:'2', age:2},{name:'1', age:1}]
 let newarr = x.arraySet(arr, name) 
 
 ```
+* deepClone 只适用于数组/对象的深拷贝
+```js
+  x.deepClone(obj)
+```
+由于js的引用对象的特性，在赋值的时候指向的是同一个内存地址。**在计算机中，有两个概念 堆和栈 ， 栈是用来存放 基本数据类型 以及 引用类型的地址；**
+
 * arraryObjRemove *数组对象选定特定删除*
 ```js
 /*
